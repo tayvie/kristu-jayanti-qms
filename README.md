@@ -1,10 +1,3 @@
-# kristu-jayanti-Queue-Management-System-QMS-By-Tayvie
-
-
-This is a high-quality, professional `README.md` tailored specifically for the **Kristu Jayanti Queue Management System**. It uses clean Markdown formatting, visual hierarchy, and clear sections to make your GitHub repository stand out.
-
-***
-
 # 🎓 Kristu Jayanti Queue Management System (QMS)
 
 ![Status](https://img.shields.io/badge/Status-Active-success) ![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue) ![MySQL](https://img.shields.io/badge/Database-MySQL-orange) ![UI](https://img.shields.io/badge/UI-Tailwind%20CSS-38B2AC)
