@@ -72,7 +72,7 @@ The system is built on a **Producer-Consumer model** using modern web technologi
     * Update `config.php` (if applicable) with your local database credentials.
 4.  **Access the App**
     * Admin: `http://localhost/kristu-jayanti-qms/`
-    * Public: Display: http://localhost/kristu-jayanti-qms/display.php
+    * Public:`http://localhost/kristu-jayanti-qms/display.php`
 
 ---
 
