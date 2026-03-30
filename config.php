@@ -1,10 +1,18 @@
 <?php
 class Database {
-    private $host = "localhost";
-    private $db_name = "queuing_system";
-    private $username = "root";
-    private $password = "";
+    // We use getenv() to fetch the values from the environment
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
     public $conn;
+
+    public function __construct() {
+        $this->host = getenv('DB_HOST') ?: "localhost";
+        $this->db_name = getenv('DB_NAME') ?: "queuing_system";
+        $this->username = getenv('DB_USER') ?: "root";
+        $this->password = getenv('DB_PASS') ?: "";
+    }
 
     public function getConnection() {
         $this->conn = null;
@@ -13,15 +21,16 @@ class Database {
             $this->conn->exec("set names utf8");
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $exception) {
-            // Return JSON instead of echoing
             header('Content-Type: application/json');
             http_response_code(500);
-            echo json_encode(['success' => false, 'message' => 'Database connection failed: ' . $exception->getMessage()]);
+            echo json_encode(['success' => false, 'message' => 'Database connection failed.']);
             exit;
         }
         return $this->conn;
     }
 }
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
