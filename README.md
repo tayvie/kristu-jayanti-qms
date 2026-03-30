@@ -78,8 +78,7 @@ The system is built on a **Producer-Consumer model** using modern web technologi
     * Move the project folder to your `htdocs` (XAMPP) or `www` (WAMP) directory.
     * Update `config.php` (if applicable) with your local database credentials.
 4.  **Access the App**
-    * Admin Panel: `http://localhost/kristu-jayanti-qms/admin`
-    * Public Display: `http://localhost/kristu-jayanti-qms/display.php`
+    * Public: `http://localhost/kristu-jayanti-qms/display.php`
 
 ---
 
